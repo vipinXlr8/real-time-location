@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Time Location App</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" integrity="sha512-Zcn6bjR/8RZbLEpLIeOwNtzREBAJnUKESxces60Mpoj+2okopSAcSUIUOseddDm0cxnGQzxIR7vJgsLZbdLE3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h1>Select a Marker Type and Share Your Location</h1>
+    <div id="marker-select">
+        <input type="radio" id="location" name="marker-type" value="location" checked>
+        <label for="location"><img src="https://img.icons8.com/ios-filled/50/000000/marker.png" alt="Location" width="24" height="24"> Location</label>
+        <input type="radio" id="person" name="marker-type" value="person">
+        <label for="person"><img src="https://img.icons8.com/ios-filled/50/000000/user.png" alt="Person" width="24" height="24"> Person</label>
+        <input type="radio" id="doctor" name="marker-type" value="doctor">
+        <label for="doctor"><img src="https://img.icons8.com/ios-filled/50/000000/doctor-male.png" alt="Doctor" width="24" height="24"> Doctor</label>
+        <input type="radio" id="car" name="marker-type" value="car">
+        <label for="car"><img src="https://img.icons8.com/ios-filled/50/000000/car.png" alt="Car" width="24" height="24"> Car</label>
+        <input type="radio" id="bike" name="marker-type" value="bike">
+        <label for="bike"><img src="https://img.icons8.com/ios-filled/50/000000/bicycle.png" alt="Bike" width="24" height="24"> Bike</label>
+    </div>
+    <div id="user-count">Total Users Connected: 0</div>
+    <div id="map" style="height: 80vh;"></div>
+    <div id="error-message" style="display: none;">
+      Cannot connect from your device. <button id="retry-button">Retry</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet-src.min.js" integrity="sha512-3/WyQrhTdqSVmSifQS62akgtNBhZha2lS44TnoN9Jk3J01FvsKK4suVmz6t5FtccGb5iJw58GoFhBjPE5EPc8Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js" integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
